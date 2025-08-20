@@ -34,4 +34,4 @@ jobs:
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         script: |
           docker stop scale || true && docker rm scale || true
-          docker run -d -p 3000:80 --name scale ${{ secrets.DOCKER_USERNAME }}/scale-app
+          docker run -d -p 80:3000 --name scale ${{ secrets.DOCKER_USERNAME }}/scale-app
